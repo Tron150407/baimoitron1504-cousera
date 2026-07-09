@@ -1,0 +1,126 @@
+/* ==========================================================================
+   1. CẤU HÌNH CƠ BẢN & KHẢ NĂNG TIẾP CẬN (WAVE APPROVED)
+   ========================================================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    color: #3e2723; /* Nâu đen đậm (Tương phản cao) */
+    background-color: #efebe9;
+}
+
+/* Tạo kiểu cho liên kết "Skip to main content" ẩn đi, chỉ hiện khi nhấn phím TAB */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #bf360c;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.2s;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.skip-link:focus {
+    top: 0; /* Hiện lên trên cùng màn hình khi tab vào */
+}
+
+header {
+    background-color: #4e342e;
+    padding: 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* ==========================================================================
+   2. THAY ĐỔI MENU THEO YÊU CẦU BÀI TẬP
+   ========================================================================== */
+
+/* Yêu cầu 3: Nhận xét (comment) kiểu dáng hiện có cho phần tử li */
+li {
+    /* display: inline-block; */
+    /* width: 140px; */
+    display: inline; /* Giữ cấu trúc danh sách nằm ngang đơn giản */
+    margin: 0 10px;
+}
+
+/* Yêu cầu 4: Thay đổi nav thành khối nội tuyến (inline-block) và rộng ~80% */
+nav {
+    background-color: #d7ccc8;
+    padding: 15px;
+    text-align: center;
+    display: inline-block; /* Chuyển thành khối nội tuyến */
+    width: 80%;            /* Chiều rộng chiếm 80% */
+    margin: 10px 10px;    /* Căn lề nhẹ xung quanh */
+}
+
+/* Yêu cầu 5: Sử dụng bộ chọn hậu duệ để chỉ định hình ảnh TRONG nav rộng ~10% */
+nav img {
+    width: 10%;
+    height: auto;
+    vertical-align: middle;
+}
+
+nav ul {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+}
+
+/* ==========================================================================
+   3. BỐ CỤC NÂNG CAO: GRID & FLEXBOX
+   ========================================================================== */
+main {
+    background-color: #ffffff;
+    padding: 30px;
+    max-width: 1100px;
+    margin: 20px auto;
+}
+
+/* Yêu cầu 6 & 8: Thiết lập lớp Grid 2 cột, mỗi cột rộng ~40% và căn chỉnh vị trí */
+.grid {
+    display: grid;
+    grid-template-columns: 40% 40%; /* Tạo lưới hai cột, mỗi cột 40% */
+    justify-content: space-around; /* Căn đều khoảng cách dư thừa ra hai bên và ở giữa */
+    align-items: start;            /* Căn các phần tử canh lề từ trên đỉnh cột */
+    row-gap: 30px;                 /* Tạo khoảng cách thông thoáng giữa các hàng */
+    margin-bottom: 40px;
+}
+
+/* Yêu cầu 7: Bộ chọn hậu duệ chỉ tác động lên hình ảnh trong lớp grid rộng 100% */
+.grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Yêu cầu 9: Thiết lập lớp Flexbox và tinh chỉnh thuộc tính */
+.flex {
+    display: flex;
+    flex-wrap: wrap;              /* Cho phép các phần tử tự động rớt dòng nếu thiếu đất */
+    justify-content: space-between; /* Đẩy các khối về hai phía rìa biên, chừa khoảng trống ở giữa */
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.flex-item {
+    flex: 1 1 250px; /* Độ rộng linh hoạt tối thiểu là 250px trước khi kích hoạt rớt dòng */
+    margin: 10px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-left: 5px solid #bf360c;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+footer {
+    background-color: #3e2723;
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    margin-top: 20px;
+}
